@@ -23,13 +23,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Recipe-app] <a name="about-project"></a>
+# 📖 [Appointement Api] <a name="about-project"></a>
 
-The **Budget app** keeps track of your transcations It allows the user to:
-
-- register and log in, so that the data is private to them.
-- introduce new transactions associated with a category.
-- see the money spent on each category.
+The **Appointement Api** is an API for an appointement management system and provides backend for managing patients, doctors and appointements:
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -56,16 +52,9 @@ The **Budget app** keeps track of your transcations It allows the user to:
 
 - **Authentication**
 - **Authorization**
-- **Keep track of each transactions**
-- **Add new transactions**
-- **User friendly interface**
-- **Interactive Navbar**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Live demo <a name="live-demo"></a>
-
-Click this [live demo](https://budget-app-0yss.onrender.com)
+- **Provide details of each registered doctor**
+- **Provide details of each registered patient**
+- **Saves data for appointements**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,7 +92,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone git@github.com:shella12/budget-app.git
+  git clone git@github.com:ZuhRa-HashiMi/Final_back-end.git
 ```
 
 ### Run
@@ -170,6 +159,21 @@ _Note: You can also run the test by using just `rspec` but it runs all tests fol
 - Twitter: [@Ayesha Arshad](https://twitter.com/AyeshaA03712974)
 - LinkedIn: [Ayesha Arshad](https://www.linkedin.com/in/ayesha-arshad-a690a015a/)
 
+👤 **Zuhra Hashimi**
+
+- GitHub: [@ZuhRa-HashiMi](https://github.com/ZuhRa-HashiMi)
+- LinkedIn: [Zuhra Hashimi](https://www.linkedin.com/in/zuhra-hashimi/)
+
+👤 **Jerome Jay Osman**
+
+- GitHub: [@Jay G.O.](https://github.com/187jjay187)
+- LinkedIn: [](https://www.linkedin.com/in/)
+
+👤 **Pius Ssekweyama**
+
+- GitHub: [@pius ssekweyama](https://github.com/SSEKPIUS)
+- LinkedIn: [Ssekweyama Pius](https://www.linkedin.com/in/piusssekweyama/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -177,7 +181,7 @@ _Note: You can also run the test by using just `rspec` but it runs all tests fol
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Improving UI**
-- [ ] **Make an API of this app**
+- [ ] **Adding a payment method**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -203,7 +207,7 @@ If you like this project please give this repo a star ⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
- Design credit to [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance the author of the original design
+ Thanks to the Microverse and the author of this API
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
