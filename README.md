@@ -24,7 +24,9 @@
 
 # 📖 [Appointement Api] <a name="about-project"></a>
 
-The **Appointement Api** is an API for an appointement management system and provides backend for managing patients, doctors and appointements:
+The **Appointement Api** is an API for an appointement management system and provides backend for managing patients, doctors and appointements. The database tables are created using the following erd diagram:
+
+![](./erd-diagram.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
