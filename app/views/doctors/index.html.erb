@@ -1,2 +1,11 @@
-<h1>Doctors#index</h1>
-<p>Find me in app/views/doctors/index.html.erb</p>
+<h1> Add a new Doctor </h1>
+
+<%= render "form", doctor: @doctor %>
+
+<% @doctors.each do |doctor| %>
+    <%= image_tag(doctor.profile_picture) %>
+    <p> <%=doctor.fullname %></p>
+    <p> <%=doctor.specialization %></p>
+    <p> <%=doctor.fees %></p>
+    <p> <%=doctor.available_time %></p>
+<% end %>
