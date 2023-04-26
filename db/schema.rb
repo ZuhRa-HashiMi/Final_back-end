@@ -18,6 +18,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_26_080558) do
     t.string "fullname"
     t.string "specialization"
     t.string "profile_picture"
+    t.float "fees"
+    t.string "available_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
