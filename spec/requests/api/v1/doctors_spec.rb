@@ -1,12 +1,9 @@
 require 'swagger_helper'
 
 RSpec.describe 'api/v1/doctors', type: :request do
-
   path '/api/v1/doctors' do
-
     get('list doctors') do
       response(200, 'successful') do
-
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -25,10 +22,10 @@ RSpec.describe 'api/v1/doctors', type: :request do
           type: :object,
           properties: {
             fullname: { type: :string },
-            specialization: { type: :string},
-            profile_picture: { type: :string},
-            fees: { type: :float},
-            available_time: { type: :string},
+            specialization: { type: :string },
+            profile_picture: { type: :string },
+            fees: { type: :float },
+            available_time: { type: :string }
           },
           required: %w[fullname specialization profile_picture fees available_time]
         }
@@ -37,7 +34,7 @@ RSpec.describe 'api/v1/doctors', type: :request do
           let(:doctor) { { fullname: 'Dodo', specialization: 'medicine', profile_picture: 'http://example.com/avatar.jpg', fees: 50.0, available_time: 'tue 12:00pm' } }
           run_test!
         end
-  
+
         response '422', 'invalid request' do
           let(:doctor) { { fullname: 'foo' } }
           run_test!
@@ -47,10 +44,8 @@ RSpec.describe 'api/v1/doctors', type: :request do
   end
 
   path '/api/v1/doctors/new' do
-
     get('new doctor') do
       response(200, 'successful') do
-
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
