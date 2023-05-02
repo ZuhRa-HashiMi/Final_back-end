@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resource :user, only: [:show, :update]
   end
+  resource :user, only: [:show, :update]
   resources :doctors
   root "doctors#index"
 
