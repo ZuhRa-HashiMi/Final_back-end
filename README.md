@@ -24,7 +24,8 @@
 
 # 📖 [Appointement Api] <a name="about-project"></a>
 
-The **Appointement Api** is an API for an appointement management system and provides backend for managing patients, doctors and appointements. The database tables are created using the following erd diagram:
+The **Appointement Api** is an API for an appointement management system and provides backend for managing patients, doctors and appointements. To use the api you can check api [documentation](http://localhost:3000/api-docs)!
+The database tables are created using the following erd diagram:
 
 ![](./erd-diagram.png)
 
@@ -136,6 +137,8 @@ $ rails s
 visit [localhost](http://localhost:3000/) in your browser!
 
 To exit server enter “Control (^ )+ C”
+
+Now to use the api you can check api [documentation](http://localhost:3000/api-docs)!
 
 ### Tests
 

@@ -1,0 +1,159 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/appointements":
+    get:
+      summary: list appointements
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create appointement
+      parameters: []
+      responses:
+        '201':
+          description: appointement created
+        '422':
+          description: invalid request
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: references
+                doctor:
+                  type: references
+              required:
+              - user
+              - doctor
+  "/api/v1/appointements/new":
+    get:
+      summary: new appointement
+      responses:
+        '200':
+          description: successful
+  "/api/v1/appointements/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show appointement
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update appointement
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update appointement
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete appointement
+      responses:
+        '200':
+          description: successful
+  "/api/v1/doctors":
+    get:
+      summary: list doctors
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create doctor
+      parameters: []
+      responses:
+        '201':
+          description: doctor created
+        '422':
+          description: invalid request
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                fullname:
+                  type: string
+                specialization:
+                  type: string
+                profile_picture:
+                  type: string
+                fees:
+                  type: float
+                available_time:
+                  type: string
+              required:
+              - fullname
+              - specialization
+              - profile_picture
+              - fees
+              - available_time
+  "/api/v1/doctors/new":
+    get:
+      summary: new doctor
+      responses:
+        '200':
+          description: successful
+  "/api/v1/doctors/{id}/edit":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: edit doctor
+      responses:
+        '200':
+          description: successful
+  "/api/v1/doctors/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show doctor
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update doctor
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update doctor
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete doctor
+      responses:
+        '200':
+          description: successful
+servers:
+- url: https://localhost
+  variables:
+    defaultHost:
+      default: www.example.com
