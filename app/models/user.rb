@@ -1,7 +1,15 @@
 class User < ApplicationRecord
-  include Devise::JWT::RevocationStrategies::JTIMatcher
-  devise :database_authenticatable, :registerable, :validatable,
-         :jwt_authenticatable, :recoverable, :rememberable, jwt_revocation_strategy: self
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
 
-  has_many :appointments
+  validates :username, uniqueness: { case_sensitive: false }, presence: true, allow_blank: false,
+                       format: { with: /\A[a-zA-Z0-9]+\z/ }
+
+  def generate_jwt
+    JWT.encode({ id:,
+                 exp: 60.days.from_now.to_i },
+               Rails.application.secrets.secret_key_base)
+  end
 end

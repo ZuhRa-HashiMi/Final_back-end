@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
+  scope :api, defaults: { format: :json } do
+    devise_for :users
+  end
+
   mount Rswag::Ui::Engine => '/api-docs'
   mount Rswag::Api::Engine => '/api-docs'
-  devise_for :users
-  resources :doctors
-  resources :appointments
-  root "doctors#index"
 
   namespace :api do
     namespace :v1, defaults: { format: :json } do
