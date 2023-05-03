@@ -20,7 +20,9 @@ gem 'devise'
 gem 'devise-jwt'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-gem 'rack-cors'
+gem 'rack-cors', :require => 'rack/cors'
+
+gem 'bcrypt' 
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'

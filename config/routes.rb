@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
-  scope :api, defaults: { format: :json } do
-    devise_for :users, controllers: { sessions: :sessions },
-                       path_names: { sign_in: :login }
+ 
+  resources :sessions, only: [:create]
+  resources :users
 
-    resource :user, only: [:show, :update]
-  end
-
+  delete :logout, to: "sessions#logout"
+  get :logged_in, to: "sessions#logged_in"
+  
+  root to: "static#home"
   mount Rswag::Ui::Engine => '/api-docs'
   mount Rswag::Api::Engine => '/api-docs'
 
