@@ -1,3 +1,5 @@
+<a name="readme-top"></a>
+
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -6,45 +8,37 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
-  - [Run](#run)
   - [Usage](#usage)
-  - [Test](#tests)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Appointement Api] <a name="about-project"></a>
+# 📖 Doctor Appointment <a name="about-project"></a>
 
-The **Appointement Api** is an API for an appointement management system and provides backend for managing patients, doctors and appointements. To use the api you can check api [documentation](http://localhost:3000/api-docs)!
-The database tables are created using the following erd diagram:
-
-![](./erd-diagram.png)
+Back-end repo for the Doctor Appointment Project
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Server</summary>
+  <summary>Language</summary>
   <ul>
-    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
-    <li><a href="https://www.ruby-lang.org/en/">Ruby on Rails</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href="https://rubyonrails.org/">Rails</a></li>
+    <li><a href="https://www.postgresql.org/">Postgresql</a></li>
   </ul>
 </details>
 
@@ -52,104 +46,56 @@ The database tables are created using the following erd diagram:
 
 ### Key Features <a name="key-features"></a>
 
-- **Authentication**
-- **Authorization**
-- **Provide details of each registered doctor**
-- **Provide details of each registered patient**
-- **Saves data for appointements**
+- **See various doctors**
+- **Reserve doctors**
+- **Add doctors**
+- **Delete doctors**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Front End app <a name="live-demo"></a>
+
+https://github.com/ZuhRa-HashiMi/Final_front-end
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps.
+To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-- Ruby (ruby --version)
-- SQLite3 (sqlite3 --version)
-- Node.js (node --version)
-- Yarn (yarn --version)
+In order to run this project you need:
 
-### Install
-
-Since Rails started out as a project full of packages and libraries, and has since become the full-stack framework it is, it can be easy to forget that it is also just a package itself.
-If these are all good, you can check:
-
-- Rails (rails --version)
-
-If you get a good version, you're ready to go! (Almost).
-If you didn't, you may still need to install the Rails gem.
-
-`gem install rails`
-
-It can be good to keep in mind which version you're using as each of these will update on their own schedule and sometimes the code changes just enough to give us bugs. This will be true for all the packages, gems, APIs, or any other dependencies you may bring into your projects as a developer.
-
+- Install ruby on your computer or run it with docker
+- Have rails installed on your computer
 
 ### Setup
 
-Clone this repository to your desired folder:
+Clone this repository by using the command line :
 
-```sh
-  cd my-folder
-  git clone git@github.com:ZuhRa-HashiMi/Final_back-end.git
-```
+- `git clone https://github.com/ZuhRa-HashiMi/Final_front-end`
 
-### Run
+### Install
 
-To run this app on your local environment install the gems by running the command `bundle install`.
-To create a database run: 
+Install this project with:
 
-```rb
-
-rails db:create
-rails db:migrate
-
-```
-
-To insert some data into your database you can run the seed
-
-```rb
-
-rails db:seed
-
-```
+`bundle install`
 
 ### Usage
 
-You need to get your Rails application server running,in order to see your app in the browser. This is like live preview in the browser for rails applications. Run :
+To run the project, execute the following command:
 
+`rails s`
 
-```sh
- $ bin/rails server
-
-```
-
-OR
-
-```sh
-$ rails s
+NB: You need to create an `env` file for your database credentials
+your env file should contain the following
 
 ```
-
-visit [localhost](http://localhost:3000/) in your browser!
-
-To exit server enter “Control (^ )+ C”
-
-Now to use the api you can check api [documentation](http://localhost:3000/api-docs)!
-
-### Tests
-
-To create tests, RSpec testing framework is used. In order to run tests use following command:
-
-
-```sh
- $ rspec spec
-
+DATABASE_NAME=Doctor_Appointments_App
+RAILS_DATABASE_USER=
+RAILS_DATABASE_PASSWORD=
 ```
-_Note: You can also run the test by using just `rspec` but it runs all tests folders and files with name like `****_spec`_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -157,26 +103,33 @@ _Note: You can also run the test by using just `rspec` but it runs all tests fol
 
 ## 👥 Authors <a name="authors"></a>
 
+
+👤 **Zuhra Hashimi**
+
+- GitHub: [@ZuhRa-HashiMi](https://github.com/ZuhRa-HashiMi)
+- LinkedIn: [Zuhra Hashmi](https://www.linkedin.com/in/zuhra-hashimi/)
+- AngelList: [zuhra-hashimi](https://wellfound.com/u/zuhra-hashimi)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 👤 **Ayesha Arshad**
 
 - GitHub: [@shella12](https://github.com/shella12)
 - Twitter: [@Ayesha Arshad](https://twitter.com/AyeshaA03712974)
 - LinkedIn: [Ayesha Arshad](https://www.linkedin.com/in/ayesha-arshad-a690a015a/)
 
-👤 **Zuhra Hashimi**
+👤 **Ssekweyama Pius**
 
-- GitHub: [@ZuhRa-HashiMi](https://github.com/ZuhRa-HashiMi)
-- LinkedIn: [Zuhra Hashimi](https://www.linkedin.com/in/zuhra-hashimi/)
 
-👤 **Jerome Jay Osman**
+- GitHub: [@githubhandle](https://github.com/SSEKPIUS)
+- Twitter: [@twitterhandle](https://twitter.com/SSEK_PIUS)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/pius-ssekweyama-23665794)
 
-- GitHub: [@Jay G.O.](https://github.com/187jjay187)
-- LinkedIn: [](https://www.linkedin.com/in/)
 
-👤 **Pius Ssekweyama**
+👤 **Jerome**
 
-- GitHub: [@pius ssekweyama](https://github.com/SSEKPIUS)
-- LinkedIn: [Ssekweyama Pius](https://www.linkedin.com/in/piusssekweyama/)
+- GitHub: [@githubhandle](https://github.com/187jjay187)
+- Twitter: [@twitterhandle](https://twitter.com/187jjay187)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/jerome-osman-137605a4)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -184,8 +137,11 @@ _Note: You can also run the test by using just `rspec` but it runs all tests fol
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Improving UI**
-- [ ] **Adding a payment method**
+- **Add rating system**
+- **Updating doctor**
+- **Filter users by their roles**
+- **Add user portfolio**
+- **Add super user**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -195,7 +151,7 @@ _Note: You can also run the test by using just `rspec` but it runs all tests fol
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/ZuhRa-HashiMi/Final_back-end/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -203,7 +159,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project please give this repo a star ⭐️
+If you like this project by staring it.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -211,7 +167,7 @@ If you like this project please give this repo a star ⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
- Thanks to the Microverse and the author of this API
+I would like to thank Microverse for the project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
