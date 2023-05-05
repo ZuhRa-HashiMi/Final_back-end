@@ -1,6 +1,6 @@
 class Api::V1::AppointmentsController < ApplicationController
   def index
-    render json: Appointment.all.where(user: current_user)
+    render json: Appointment.all
   end
 
   def show
