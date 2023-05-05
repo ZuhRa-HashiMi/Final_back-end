@@ -28,6 +28,6 @@ class Api::V1::AppointmentsController < ApplicationController
   end
 
   def appointment_params
-    params.permit(:user, :doctor)
+    params.permit(user: current_user, :doctor, :appointement_date)
   end
 end
